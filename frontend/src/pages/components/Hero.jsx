@@ -3,6 +3,16 @@ import bluebghero from '../../assets/blue-bg-hero.jpg'
 import hero2 from '../../assets/hero2img.jpg'
 
 
+import TechStack from './TechStack';
+
+import React , {useState} from 'react';
+
+
+
+
+
+
+
 
 
 export default function Hero () {
@@ -175,6 +185,10 @@ export default function Hero () {
             </div>
             </section>
 
+
+                {/* TECH STACK SECTION */}
+
+                    <TechStack />
                 
             </>
         )
