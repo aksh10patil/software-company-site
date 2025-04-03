@@ -7,6 +7,7 @@ import investment from '../../assets/investment.png';
 import retail from '../../assets/retail.png';
 import manufacture from '../../assets/manufacture.png';
 import personal from '../../assets/personal.png';
+import peopleinco from '../../assets/peopleinco.png';
 import aboutushero from '../../assets/aboutushero.jpg';
 import Footer from './Footer';
 
@@ -89,20 +90,34 @@ const TechStack2 = () => {
       </section>
 
       <div>
-        <section className="max-w-7xl mx-auto p-4 md:p-8">
+
+        <section className="max-w-7xl mx-auto p-4 md:p-8 px-4 space-x-3">
+        <div className="flex items-center space-x-4 mb-6">
+              <div className="w-12 h-12 bg-blue-100 rounded-md"></div>
+              <h2 className="text-3xl font-bold text-blue-900 space-x-3">About Alpixn</h2>
+            </div>
           <div className="flex flex-col md:flex-row gap-8 items-center">
-            <div className="w-full md:w-2/5">
-              <h1 className="text-3xl md:text-4xl font-bold text-dark-blue">About Alpixn -</h1>
-              <h2 className="text-xl md:text-2xl font-semibold text-black">Your Partner for Project Success</h2>
-              <p className="text-gray-700 leading-relaxed">
-                Founded in 2014, Alpixn Corporation, doing business as Alpixn, provides IT consulting and software development services.
-                Clients respect us for unfailing budget and time control, cooperation transparency, and consistently high service quality.
-              </p>
+        
+            <div className="w-full md:w-4/5">
+        
+           
+              <h2 className="text-xl md:text-2xl font-semibold text-black mt-4">Your Partner for Project Success</h2>
+              <p className="text-gray-700 leading-relaxed mt-2">
+                 Founded in 2016, Alpixn is dedicated to empowering startups by transforming visionary ideas into cutting-edge digital solutions.
+                  Specializing in advanced technologies such as Artificial Intelligence (AI), Machine Learning (ML), and modern frameworks like React, we offer comprehensive services 
+                  in software development, mobile applications, and website creation.​ <p></p>
+                  <br />
+            Our mission is to bridge innovation with imagination, providing startups with the technological foundation they need to thrive in a competitive landscape. <p></p>
+            <br />
+
+            At Alpixn, we believe in a collaborative approach, working closely with our clients to understand their unique challenges and goals. This partnership enables us to deliver tailored solutions that not only meet current needs but also anticipate future growth.​
+            With a team of passionate experts committed to excellence, Alpixn is more than a service provider; we are a trusted partner in your startup journey. Together, let's innovate, create, and lead the future.
+             </p>
             </div>
 
-            <div className="w-full md:w-3/5">
+            <div className="w-full md:w-2/5">
               <div className="relative">
-                <img src={aboutushero} alt="Alpixns team members collaborating" className="w-full rounded-lg shadow-lg" />
+                <img src={peopleinco} alt="Alpixns team members collaborating" className="w-full rounded-lg shadow-lg" />
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
                   {[...Array(6)].map((_, index) => (
                     <span key={index} className={`h-2 w-2 rounded-full bg-white ${index === 3 ? 'bg-opacity-100 ring-2 ring-blue-500' : 'opacity-50'}`}></span>

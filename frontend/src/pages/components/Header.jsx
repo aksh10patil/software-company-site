@@ -51,7 +51,7 @@ export default function AlpixinHeader() {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-gray-800 bg-opacity-90 p-4">
+        <div className="md:hidden bg-dark-blue bg-opacity-90 p-4">
           <div className="flex flex-col space-y-4">
             <Link to="/" className="text-white font-medium">Home</Link>
             <Link to="/aboutus" className="text-white font-medium">About Us</Link>
@@ -60,7 +60,7 @@ export default function AlpixinHeader() {
             <Link to="/hiretalent" className="text-white font-medium">Hire Talent</Link>
             <Link to="/portfolio" className="text-white font-medium">Portfolio</Link>
             <Link to="/contact" className="text-white font-medium">Contacts</Link>
-            <Link to="/Services" className="border border-white text-black px-4 py-2 text-center">
+            <Link to="/Services" className="border border-white text-white px-4 py-2 text-center">
               BOOK A VISIT
             </Link>
           </div>
