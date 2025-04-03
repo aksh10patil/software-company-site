@@ -1,4 +1,17 @@
 import React, { useState } from 'react';
+import cpp from '../../assets/cpp.png'
+import nodejs from '../../assets/nodejs.png'
+import golang2 from '../../assets/golang2.png'
+import java from '../../assets/java.png'
+import laravel from '../../assets/laravel.png'
+import net from '../../assets/net.png'
+import php from '../../assets/php.png'
+import python from '../../assets/python.png'
+import ruby2 from '../../assets/ruby2.png'
+
+
+
+
 
 const techCategories = [
   { id: 'web', name: 'Web' },
@@ -13,15 +26,15 @@ const techCategories = [
 ];
 
 const backendTech = [
-  { id: 'ruby', image: '/images/ruby.png', alt: 'Ruby' },
-  { id: 'nodejs', image: '/images/nodejs.png', alt: 'Node.js' },
-  { id: 'python', image: '/images/python.png', alt: 'Python' },
-  { id: 'golang', image: '/images/golang.png', alt: 'Golang' },
-  { id: 'dotnet', image: '/images/dotnet.png', alt: '.NET' },
-  { id: 'java', image: '/images/java.png', alt: 'Java' },
-  { id: 'php', image: '/images/php.png', alt: 'PHP' },
-  { id: 'cpp', image: '/images/cpp.png', alt: 'C++' },
-  { id: 'laravel', image: '/images/laravel.png', alt: 'Laravel' }
+  { id: 'ruby', image: ruby2, alt: 'Ruby' },
+  { id: 'nodejs', image: nodejs, alt: 'Node.js' },
+  { id: 'python', image:  python, alt: 'Python' },
+  { id: 'golang', image:  golang2, alt: 'Golang' },
+  { id: 'net', image:  net, alt: '.NET' },
+  { id: 'java', image:  java,  alt: 'Java' },
+  { id: 'php', image:  php,    alt: 'PHP' },
+  { id: 'cpp', image:  cpp,    alt: 'C++' },
+  { id: 'laravel', image:  laravel,    alt: 'Laravel' }
 ];
 
 const frontendTech = [
