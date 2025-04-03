@@ -54,7 +54,7 @@ export default function AlpixinHeader() {
         <div className="md:hidden bg-gray-800 bg-opacity-90 p-4">
           <div className="flex flex-col space-y-4">
             <Link to="/" className="text-white font-medium">Home</Link>
-            <Link to="/about-us" className="text-white font-medium">About Us</Link>
+            <Link to="/aboutus" className="text-white font-medium">About Us</Link>
             <Link to="/Services" className="text-white font-medium">Services</Link>
             <Link to="/industries" className="text-white font-medium">Industries</Link>
             <Link to="/hiretalent" className="text-white font-medium">Hire Talent</Link>
