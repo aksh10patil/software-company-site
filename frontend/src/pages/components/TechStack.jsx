@@ -8,7 +8,14 @@ import net from '../../assets/net.png'
 import php from '../../assets/php.png'
 import python from '../../assets/python.png'
 import ruby2 from '../../assets/ruby2.png'
-
+import css from '../../assets/css.png'
+import ember from '../../assets/ember.png'
+import flutter from '../../assets/flutter.png'
+import js from '../../assets/js.png'
+import vuejs from '../../assets/vuejs.png'
+import typescript from '../../assets/typescript.png'
+import reacts from '../../assets/reacts.png'
+import angular from '../../assets/angular.png'
 
 
 
@@ -38,14 +45,14 @@ const backendTech = [
 ];
 
 const frontendTech = [
-  { id: 'angular', image: '/images/angular.png', alt: 'Angular' },
-  { id: 'react', image: '/images/react.png', alt: 'React' },
-  { id: 'vue', image: '/images/vue.png', alt: 'Vue.js' },
-  { id: 'js', image: '/images/javascript.png', alt: 'JavaScript' },
-  { id: 'html-css', image: '/images/html-css.png', alt: 'HTML5/CSS3' },
-  { id: 'ember', image: '/images/ember.png', alt: 'Ember' },
-  { id: 'flutter', image: '/images/flutter.png', alt: 'Flutter' },
-  { id: 'typescript', image: '/images/typescript.png', alt: 'TypeScript' }
+  { id: 'angular', image: angular, alt: 'Angular' },
+  { id: 'react', image: reacts  ,alt: 'React' },
+  { id: 'vue', image: vuejs , alt: 'Vue.js' },
+  { id: 'js', image: js , alt: 'JavaScript' },
+  { id: 'html-css', image: css, alt: 'HTML5/CSS3' },
+  { id: 'ember', image: ember, alt: 'Ember' },
+  { id: 'flutter', image: flutter , alt: 'Flutter' },
+  { id: 'typescript', image: typescript, alt: 'TypeScript' }
 ];
 
 const TechStack = () => {
