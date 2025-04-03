@@ -103,7 +103,7 @@ export default function Footer  () {
 
         {/* Copyright */}
         <div className="mt-12 text-center text-sm opacity-70">
-          <p>© All Rights reserved - Alpixn Software Services LLP | Alpixn.Inc.</p>
+          <p>© All Rights reserved -  Alpixn Technologies Private Limited | Alpixn.Inc.</p>
         </div>
       </div>
     </footer>
