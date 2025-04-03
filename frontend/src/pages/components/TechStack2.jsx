@@ -26,11 +26,12 @@ const TechStack2 = () => {
   return (
     <>
       <section className="py-16 px-4 text-center bg-white">
-        <div className="mb-8">
-          <span className="bg-dark-blue text-white px-6 py-2 rounded-md font-medium">
-            WE DRIVE SUCCESS FOR BUSINESSES WORLDWIDE!
-          </span>
-        </div>
+            <div className="mb-8 flex justify-center">
+        <span className="bg-dark-blue text-white px-4 py-2 rounded-md font-medium text-sm sm:text-base md:px-6 md:py-3">
+          WE DRIVE SUCCESS FOR BUSINESSES WORLDWIDE!
+        </span>
+      </div>
+
 
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
           Unlocking Tomorrow's Tech Today!
