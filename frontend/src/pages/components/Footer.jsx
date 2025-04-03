@@ -65,11 +65,11 @@ export default function Footer  () {
             <div className="space-y-6">
               <div>
                 <p className="text-light-blue mb-2">Mobile</p>
-                <p>India: +91 6263971724</p>
+                <p>India: +91 7069990055</p>
               </div>
               <div>
                 <p className="text-light-blue mb-2">Email</p>
-                <p>hello@Alpixn.in</p>
+                <p>info@Alpixn.com</p>
               </div>
               <div>
                 <p className="text-light-blue mb-2">Follow Us</p>
