@@ -124,13 +124,6 @@ export default function Hero () {
                                     class="w-full h-full object-cover rounded-md"
                                     />
 
-                                    <div class="absolute top-4 right-4">
-                                    <img 
-                                        src="/path-to-certification-badge.png" 
-                                        alt="Great Place To Work Certified" 
-                                        class="w-20"
-                                    />
-                                    </div>
                                 </div>
 
 

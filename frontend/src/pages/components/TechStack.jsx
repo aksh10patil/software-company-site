@@ -55,6 +55,8 @@ const frontendTech = [
   { id: 'typescript', image: typescript, alt: 'TypeScript' }
 ];
 
+
+
 const TechStack = () => {
   const [activeCategory, setActiveCategory] = useState('web');
 

@@ -20,7 +20,7 @@ export default function AlpixinHeader() {
 
         <div className="hidden md:flex items-center space-x-8 bg-header-skin">
           <Link to="/" className="text-black font-medium hover:text-dark-blue">Home</Link>
-          <Link to="/about-us" className="text-black font-medium hover:text-dark-blue">About Us</Link>
+          <Link to="/aboutus" className="text-black font-medium hover:text-dark-blue">About Us</Link>
           <Link to="/Services" className="text-black font-medium hover:text-dark-blue flex items-center">
             Services
             <svg className="ml-1 w-1 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
