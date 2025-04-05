@@ -144,13 +144,13 @@ export default function Hero () {
                     <div class="text-gray-300">Years of Experience</div>
                     </div>
                     <div>
-                    <div class="text-white text-5xl font-bold mb-2">14</div>
+                    <div class="text-white text-5xl font-bold mb-2 blur-sm hover:blur-none transition-all duration-300">14</div>
                     <div class="text-gray-300">Certified Scrum Masters</div>
                     </div>
 
 
                     <div class="border-r border-gray-700">
-                    <div class="text-white text-5xl font-bold mb-2">06</div>
+                    <div class="text-white text-5xl font-bold mb-2 blur-sm hover:blur-none transition-all duration-300">06</div>
                     <div class="text-gray-300">Worldwide Offices</div>
                     </div>
                     <div>
@@ -160,18 +160,7 @@ export default function Hero () {
 
 
                     <div class="border-r border-gray-700">
-                    <img 
-                        src="/path-to-clutch-logo.png" 
-                        alt="Clutch 4.7 Rating" 
-                        class="h-16"
-                                />
-                    </div>
-                    <div>
-                    <img 
-                        src="/path-to-iso-logo.png" 
-                        alt="ISO 27001:2013 Certified" 
-                        class="h-16"
-                    />
+            
                     </div>
                 </div>
                 </div>

@@ -19,6 +19,40 @@ import angular from '../../assets/angular.png'
 
 
 
+import android from '../../assets/android.png'
+import ios from '../../assets/ios.png'
+import reactNative from '../../assets/reactNative.png'
+import xamarin from '../../assets/xamarin.png'
+import kotlin from '../../assets/kotlin.png'
+import swift from '../../assets/swift.png'
+import docker from '../../assets/docker.png'
+import kubernetes from '../../assets/kubernetes.png'
+import jenkins from '../../assets/jenkins.png'
+import gitlab from '../../assets/gitlab.png'
+import aws from '../../assets/aws.png'
+import azure from '../../assets/azure.png'
+import gcp from '../../assets/gcp.png'
+import digitalOcean from '../../assets/digital-ocean.png'
+import heroku from '../../assets/heroku.png'
+import wordpress from '../../assets/wordpress.png'
+import shopify from '../../assets/shopify.png'
+import salesforce from '../../assets/salesforce.png'
+import mysql from '../../assets/mysql.png'
+import postgresql from '../../assets/postgresql.png'
+import oracle from '../../assets/oracle.png'
+import mssql from '../../assets/mssql.png'
+import mongodb from '../../assets/mongodb.png'
+import hadoop from '../../assets/hadoop.png'
+import spark from '../../assets/spark.png'
+import kafka from '../../assets/kafka.png'
+import elasticsearch from '../../assets/elasticsearch.png'
+import tensorflow from '../../assets/tensorflow.png'
+import pytorch from '../../assets/pytorch.png'
+import scikit from '../../assets/scikit.png'
+import selenium from '../../assets/selenium.png'
+import cypress from '../../assets/cypress.png'
+import ansible from '../../assets/ansible.png'
+import terraform from '../../assets/terraform.png'
 
 const techCategories = [
   { id: 'web', name: 'Web' },
@@ -35,30 +69,119 @@ const techCategories = [
 const backendTech = [
   { id: 'ruby', image: ruby2, alt: 'Ruby' },
   { id: 'nodejs', image: nodejs, alt: 'Node.js' },
-  { id: 'python', image:  python, alt: 'Python' },
-  { id: 'golang', image:  golang2, alt: 'Golang' },
-  { id: 'net', image:  net, alt: '.NET' },
-  { id: 'java', image:  java,  alt: 'Java' },
-  { id: 'php', image:  php,    alt: 'PHP' },
-  { id: 'cpp', image:  cpp,    alt: 'C++' },
-  { id: 'laravel', image:  laravel,    alt: 'Laravel' }
+  { id: 'python', image: python, alt: 'Python' },
+  { id: 'golang', image: golang2, alt: 'Golang' },
+  { id: 'net', image: net, alt: '.NET' },
+  { id: 'java', image: java, alt: 'Java' },
+  { id: 'php', image: php, alt: 'PHP' },
+  { id: 'cpp', image: cpp, alt: 'C++' },
+  { id: 'laravel', image: laravel, alt: 'Laravel' }
 ];
 
 const frontendTech = [
   { id: 'angular', image: angular, alt: 'Angular' },
-  { id: 'react', image: reacts  ,alt: 'React' },
-  { id: 'vue', image: vuejs , alt: 'Vue.js' },
-  { id: 'js', image: js , alt: 'JavaScript' },
+  { id: 'react', image: reacts, alt: 'React' },
+  { id: 'vue', image: vuejs, alt: 'Vue.js' },
+  { id: 'js', image: js, alt: 'JavaScript' },
   { id: 'html-css', image: css, alt: 'HTML5/CSS3' },
   { id: 'ember', image: ember, alt: 'Ember' },
-  { id: 'flutter', image: flutter , alt: 'Flutter' },
+  { id: 'flutter', image: flutter, alt: 'Flutter' },
   { id: 'typescript', image: typescript, alt: 'TypeScript' }
 ];
 
+// New tech categories
+const mobileTech = [
+  { id: 'android', image: android, alt: 'Android' },
+  { id: 'ios', image: ios, alt: 'iOS' },
+  { id: 'react-native', image: reactNative, alt: 'React Native' },
+  { id: 'flutter-mobile', image: flutter, alt: 'Flutter' },
+  { id: 'xamarin', image: xamarin, alt: 'Xamarin' },
+  { id: 'kotlin', image: kotlin, alt: 'Kotlin' },
+  { id: 'swift', image: swift, alt: 'Swift' }
+];
 
+const devopsTech = [
+  { id: 'docker', image: docker, alt: 'Docker' },
+  { id: 'kubernetes', image: kubernetes, alt: 'Kubernetes' },
+  { id: 'jenkins', image: jenkins, alt: 'Jenkins' },
+  { id: 'gitlab-ci', image: gitlab, alt: 'GitLab CI/CD' },
+  { id: 'ansible', image: ansible, alt: 'Ansible' },
+  { id: 'terraform', image: terraform, alt: 'Terraform' }
+];
+
+const cloudTech = [
+  { id: 'aws', image: aws, alt: 'Amazon Web Services' },
+  { id: 'azure', image: azure, alt: 'Microsoft Azure' },
+  { id: 'gcp', image: gcp, alt: 'Google Cloud Platform' },
+  { id: 'digital-ocean', image: digitalOcean, alt: 'Digital Ocean' },
+  { id: 'heroku', image: heroku, alt: 'Heroku' }
+];
+
+const platformsTech = [
+  { id: 'wordpress', image: wordpress, alt: 'WordPress' },
+  { id: 'shopify', image: shopify, alt: 'Shopify' },
+  { id: 'salesforce', image: salesforce, alt: 'Salesforce' }
+];
+
+const relationalDBTech = [
+  { id: 'mysql', image: mysql, alt: 'MySQL' },
+  { id: 'postgresql', image: postgresql, alt: 'PostgreSQL' },
+  { id: 'oracle', image: oracle, alt: 'Oracle' },
+  { id: 'mssql', image: mssql, alt: 'MS SQL Server' },
+  { id: 'mongodb', image: mongodb, alt: 'MongoDB' }
+];
+
+const bigDataTech = [
+  { id: 'hadoop', image: hadoop, alt: 'Hadoop' },
+  { id: 'spark', image: spark, alt: 'Apache Spark' },
+  { id: 'kafka', image: kafka, alt: 'Apache Kafka' },
+  { id: 'elasticsearch', image: elasticsearch, alt: 'Elasticsearch' }
+];
+
+const mlTech = [
+  { id: 'tensorflow', image: tensorflow, alt: 'TensorFlow' },
+  { id: 'pytorch', image: pytorch, alt: 'PyTorch' },
+  { id: 'scikit', image: scikit, alt: 'Scikit-Learn' },
+  { id: 'python-ml', image: python, alt: 'Python' }
+];
+
+const automationTech = [
+  { id: 'selenium', image: selenium, alt: 'Selenium' },
+  { id: 'cypress', image: cypress, alt: 'Cypress' },
+  { id: 'jenkins-auto', image: jenkins, alt: 'Jenkins' },
+  { id: 'ansible-auto', image: ansible, alt: 'Ansible' }
+];
 
 const TechStack = () => {
   const [activeCategory, setActiveCategory] = useState('web');
+
+  // Helper function to determine which tech array to show based on active category
+  const getTechForCategory = () => {
+    switch (activeCategory) {
+      case 'web':
+        return { backend: backendTech, frontend: frontendTech };
+      case 'mobile':
+        return { tech: mobileTech };
+      case 'devops':
+        return { tech: devopsTech };
+      case 'cloud':
+        return { tech: cloudTech };
+      case 'platforms':
+        return { tech: platformsTech };
+      case 'relational':
+        return { tech: relationalDBTech };
+      case 'bigdata':
+        return { tech: bigDataTech };
+      case 'ml':
+        return { tech: mlTech };
+      case 'auto':
+        return { tech: automationTech };
+      default:
+        return { backend: backendTech, frontend: frontendTech };
+    }
+  };
+
+  const activeTech = getTechForCategory();
 
   return (
     <section className="bg-gray-50 py-16">
@@ -70,22 +193,7 @@ const TechStack = () => {
         </p>
 
         <div className="flex justify-end mb-8 space-x-2">
-          <button 
-            className="w-10 h-10 rounded-full bg-dark-blue text-white flex items-center justify-center hover:bg-orange-500 transition-colors duration-300"
-            aria-label="Previous"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-          <button 
-            className="w-10 h-10 rounded-full bg-dark-blue text-white flex items-center justify-center hover:bg-orange-500 transition-colors duration-300"
-            aria-label="Next"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
+         
         </div>
 
         <div className="border-b border-gray-200 mb-8">
@@ -105,33 +213,51 @@ const TechStack = () => {
           </nav>
         </div>
 
-        <div className="mb-12">
-          <h3 className="text-lg font-semibold text-gray-700 mb-6">BACK END</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            {backendTech.map((tech) => (
-              <div 
-                key={tech.id} 
-                className="border border-gray-200 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <img src={tech.image} alt={tech.alt} className="w-full h-16 object-contain" />
+        {activeCategory === 'web' ? (
+          <>
+            <div className="mb-12">
+              <h3 className="text-lg font-semibold text-gray-700 mb-6">BACK END</h3>
+              <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                {backendTech.map((tech) => (
+                  <div 
+                    key={tech.id} 
+                    className="border border-gray-200 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                  >
+                    <img src={tech.image} alt={tech.alt} className="w-full h-16 object-contain" />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
 
-        <div className="mb-12">
-          <h3 className="text-lg font-semibold text-gray-700 mb-6">FRONT END</h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            {frontendTech.map((tech) => (
-              <div 
-                key={tech.id}
-                className="border border-gray-200 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
-              >
-                <img src={tech.image} alt={tech.alt} className="w-full h-16 object-contain" />
+            <div className="mb-12">
+              <h3 className="text-lg font-semibold text-gray-700 mb-6">FRONT END</h3>
+              <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                {frontendTech.map((tech) => (
+                  <div 
+                    key={tech.id}
+                    className="border border-gray-200 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                  >
+                    <img src={tech.image} alt={tech.alt} className="w-full h-16 object-contain" />
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+          </>
+        ) : (
+          <div className="mb-12">
+            <h3 className="text-lg font-semibold text-gray-700 mb-6">{techCategories.find(cat => cat.id === activeCategory)?.name.toUpperCase()}</h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+              {activeTech.tech?.map((tech) => (
+                <div 
+                  key={tech.id} 
+                  className="border border-gray-200 bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+                >
+                  <img src={tech.image} alt={tech.alt} className="w-full h-16 object-contain" />
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         <div className="flex justify-center">
           <button className="bg-dark-blue hover:bg-orange-500 text-white px-6 py-3 rounded flex items-center transition-colors duration-300">
