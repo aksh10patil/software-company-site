@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Header from './components/Header'
+import Footer from './components/Footer'
 import dev from '../../src/assets/dev.png'
 
 export default function HireTalent() {
-  const words = ["Java", "JavaScript", "Python", "C++", "VueJS", "ReactJS", "PHP", "NodeJS"];
+  const words = ["Java", "JavaScript", "Python", "C++", "VueJS", "ReactJS", "PHP", "NodeJS", "iOS", "Flutter", "Golang"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -51,10 +52,10 @@ export default function HireTalent() {
                 className="lg:w-1/2 text-center lg:text-left"
                 >
                 <h1 className="text-4xl font-bold mb-4">
-                    Hire <span className="text-dark-blue"> Developers</span>
+                    Right <span className="text-dark-blue"> Developers </span> for the Right job
                 </h1>
                 <p className="text-black-300 mb-6">
-                    Hire developers from us to create dynamic and interactive applications.
+                    Right developers from us to create dynamic and interactive applications.
                     Our experienced developers ensure seamless performance, easy navigation, and 2x faster results.
                 </p>
 
@@ -106,6 +107,7 @@ export default function HireTalent() {
                 </motion.div>
             </div>
             </section>
+            <Footer />
 
     </>
   );
