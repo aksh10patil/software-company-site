@@ -29,7 +29,7 @@ export default function AlpixinHeader() {
           </Link>
           <Link to="/industries" className="text-black font-medium hover:text-dark-blue">Industries</Link>
           <Link to="/hiretalent" className="text-black font-medium hover:text-dark-blue">Hire Talent</Link>
-          <Link to="/portfolio" className="text-black font-medium hover:text-dark-blue">Portfolio</Link>
+
         </div>
 
         <div className="hidden md:flex items-center space-x-6">
@@ -58,8 +58,6 @@ export default function AlpixinHeader() {
             <Link to="/Services" className="text-white font-medium">Services</Link>
             <Link to="/industries" className="text-white font-medium">Industries</Link>
             <Link to="/hiretalent" className="text-white font-medium">Hire Talent</Link>
-            <Link to="/portfolio" className="text-white font-medium">Portfolio</Link>
-            <Link to="/contact" className="text-white font-medium">Contacts</Link>
             <Link to="/Services" className="border border-white text-white px-4 py-2 text-center">
               BOOK A VISIT
             </Link>
