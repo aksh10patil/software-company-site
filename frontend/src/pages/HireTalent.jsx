@@ -16,6 +16,18 @@ export default function HireTalent() {
     return () => clearInterval(interval);
   }, []);
 
+  const whatsapplink = () => {
+    const phoneNumber = '7069990055';
+    
+    const message = encodeURIComponent(
+      `Hi, I want infromation regarding :\n`
+    );
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  };
+  
+
   return (
     <>
     <Header />
@@ -62,10 +74,10 @@ export default function HireTalent() {
 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                    <button className="bg-orange-500 hover:bg-orange-600 transition duration-300 px-6 py-3 rounded-md font-semibold">
+                    <button onClick={whatsapplink} className="bg-orange-500 hover:bg-orange-600 transition duration-300 px-6 py-3 rounded-md font-semibold">
                     START 15 DAYS RISK-FREE TRIAL
                     </button>
-                    <button className="bg-dark-blue text-white hover:bg-light-blue transition duration-300 px-6 py-3 rounded-md font-semibold border border-gray-600">
+                    <button onClick={whatsapplink} className="bg-dark-blue text-white hover:bg-light-blue transition duration-300 px-6 py-3 rounded-md font-semibold border border-gray-600">
                     SCHEDULE A CALL
                     </button>
                 </div>
@@ -120,7 +132,7 @@ export default function HireTalent() {
     </p>
     
     <div class="flex justify-center items-center space-x-8 mt-6">
-      <a href="#" class="flex items-center text-blue-600 hover:text-blue-800 font-medium">
+      <a class="flex items-center text-blue-600 hover:text-blue-800 font-medium">
         <span class="mr-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -129,7 +141,7 @@ export default function HireTalent() {
         Read testimonials
       </a>
       
-      <a href="#" class="flex items-center text-gray-500 hover:text-gray-700 font-medium">
+      <a class="flex items-center text-gray-500 hover:text-gray-700 font-medium">
         <span class="mr-2">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />

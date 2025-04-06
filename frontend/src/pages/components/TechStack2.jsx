@@ -25,6 +25,22 @@ const TechStack2 = () => {
     { id: 'professional-services', name: 'Professional services', icon: personal, bgColor: 'bg-yellow-100', iconColor: 'text-yellow-500' },
   ];
 
+
+
+  const whatsapplink = () => {
+    const phoneNumber = '7069990055';
+    
+    const message = encodeURIComponent(
+      `Hi, I want infromation regarding :\n`
+    );
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
+
+
+
   return (
     <>
       <section className="py-12 sm:py-16 px-4 text-center bg-white">
@@ -43,7 +59,7 @@ const TechStack2 = () => {
         </p>
 
         <div className="mb-10 sm:mb-16">
-          <button className="bg-dark-blue hover:bg-light-blue text-white px-6 py-2 sm:px-8 sm:py-3 font-medium rounded transition duration-300">
+          <button onClick={whatsapplink} className="bg-dark-blue hover:bg-light-blue text-white px-6 py-2 sm:px-8 sm:py-3 font-medium rounded transition duration-300">
             LET'S TALK
           </button>
         </div>
@@ -71,7 +87,7 @@ const TechStack2 = () => {
                 key={industry.id}
                 className="border border-gray-200 rounded-lg p-4 sm:p-6 relative group hover:shadow-lg transform hover:-translate-y-1 transition duration-300 ease-in-out"
               >
-                <a href={`/industries/${industry.id}`} className="absolute inset-0" aria-label={`Learn more about ${industry.name}`}></a>
+                <a className="absolute inset-0" aria-label={`Learn more about ${industry.name}`}></a>
                 <div className="flex flex-col items-center">
                   <div className={`w-12 h-12 sm:w-16 sm:h-16 ${industry.bgColor} rounded-md flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <img src={industry.icon} alt={industry.name} className="w-6 h-6 sm:w-8 sm:h-8" />
@@ -127,9 +143,10 @@ const TechStack2 = () => {
 
       {/* Mission Section - Mobile Optimized */}
       <section className="max-w-7xl mx-auto p-4 md:p-8 px-4 mt-6 sm:mt-12">
-        <div className="flex items-center justify-between mb-6">
-          <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">Alpixn Mission</h2>
+
+      <div className="flex items-center space-x-3 mb-6">
           <div className="w-10 h-10 sm:w-12 sm:h-12 bg-green-100 rounded-md"></div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-900">Alpixn Misson</h2>
         </div>
         
         <div className="flex flex-col gap-6 md:flex-row md:gap-8 items-center">

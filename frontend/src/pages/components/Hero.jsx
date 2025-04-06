@@ -8,10 +8,16 @@ import TechStack from './TechStack';
 import React , {useState} from 'react';
 
 
-
-
-
-
+const whatsapplink = () => {
+    const phoneNumber = '7069990055';
+    
+    const message = encodeURIComponent(
+      `Hi, I want infromation regarding :\n`
+    );
+    
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+  };
 
 
 
@@ -34,10 +40,15 @@ export default function Hero () {
                             Turn your ideas into products that perform exceptionally and flawlessly. 
                             We assure you, we are big enough to deliver and small enough to care.
                             </p>
-                            <a href="#" class="inline-block bg-dark-blue hover:bg-orange-600
-                             text-white font-medium py-3 mt-4 px-6 rounded transition-colors duration-200">
-                                BUILD YOUR OWN TEAM <span class="ml-2">→</span>
-                            </a>
+                          
+                            <button onClick={whatsapplink} className="inline-block bg-dark-blue hover:bg-orange-600
+                                    text-white font-medium py-3 mt-4 px-6 rounded transition-colors duration-200">
+                                     BUILD YOUR OWN TEAM <span class="ml-2">→</span>
+                            </button>
+
+
+
+
                         </div>
                     </div>
                     <div class="absolute right-0 bottom-0 w-1/2 h-1/2 bg-gradient-to-tl from-gray-800 to-transparent opacity-70"></div>

@@ -14,6 +14,19 @@ import realestate from '../../src/assets/realestate.png'
 import education from '../../src/assets/education.png'
 import food from '../../src/assets/food.png'
 
+
+const whatsapplink = () => {
+  const phoneNumber = '7069990055';
+  
+  const message = encodeURIComponent(
+    `Hi, I want infromation regarding :\n`
+  );
+  
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.open(whatsappUrl, '_blank');
+};
+
+
 function Industries () {
     return (
         <>
@@ -28,7 +41,7 @@ function Industries () {
           <p className="text-gray-600 text-lg">
             Delivering successful digital products and platforms for diverse use cases across key industries.
           </p>
-          <button className="bg-dark-blue hover:bg-light-blue text-white hover:text-black font-medium py-3 px-6 rounded-md transition duration-300">
+          <button onClick={whatsapplink} className="bg-dark-blue hover:bg-light-blue text-white hover:text-black font-medium py-3 px-6 rounded-md transition duration-300">
             Book a Call
           </button>
         </div>
@@ -88,7 +101,7 @@ function Industries () {
           {/* Call to Action */}
           <div className="mt-6 text-center lg:text-left">
             <a
-              href="#"
+              onClick={whatsapplink}
               className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center"
             >
               Inquire Now! <span className="ml-2">→</span>
@@ -155,7 +168,7 @@ function Industries () {
           {/* Call to Action */}
           <div className="mt-6 text-center lg:text-left">
             <a
-              href="#"
+             onClick={whatsapplink}
               className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center"
             >
               Inquire Now! <span className="ml-2">→</span>
@@ -198,7 +211,7 @@ function Industries () {
           {/* Call to Action */}
           <div className="mt-6 text-center lg:text-left">
             <a
-              href="#"
+               onClick={whatsapplink}
               className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center"
             >
               Inquire Now! <span className="ml-2">→</span>
@@ -258,7 +271,7 @@ function Industries () {
           {/* Call to Action */}
           <div className="mt-6 text-center lg:text-left">
             <a
-              href="#"
+               onClick={whatsapplink}
               className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center"
             >
               Inquire Now! <span className="ml-2">→</span>
@@ -295,7 +308,7 @@ function Industries () {
           {/* Call to Action */}
           <div className="mt-6 text-center lg:text-left">
             <a
-              href="#"
+               onClick={whatsapplink}
               className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center"
             >
               Inquire Now! <span className="ml-2">→</span>
@@ -355,7 +368,7 @@ function Industries () {
           {/* Call to Action */}
           <div className="mt-6 text-center lg:text-left">
             <a
-              href="#"
+               onClick={whatsapplink}
               className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center"
             >
               Inquire Now! <span className="ml-2">→</span>
@@ -393,7 +406,7 @@ function Industries () {
           {/* Call to Action */}
           <div className="mt-6 text-center lg:text-left">
             <a
-              href="#"
+               onClick={whatsapplink}
               className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center"
             >
               Inquire Now! <span className="ml-2">→</span>
@@ -459,7 +472,7 @@ function Industries () {
       {/* Call to Action */}
       <div className="mt-8 text-center">
         <a
-          href="#"
+           onClick={whatsapplink}
           className="bg-dark-blue text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-800 transition"
         >
           Find Your Dev Team

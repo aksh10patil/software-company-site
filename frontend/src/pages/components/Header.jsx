@@ -4,6 +4,21 @@ import logo from '../../assets/logo.jpeg'
 import { Link, useLocation } from 'react-router-dom';
 
 
+
+
+const whatsapplink = () => {
+  const phoneNumber = '7069990055';
+  
+  const message = encodeURIComponent(
+    `Hi, I want infromation regarding :\n`
+  );
+  
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+  window.open(whatsappUrl, '_blank');
+};
+
+
+
 export default function AlpixinHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
@@ -33,7 +48,9 @@ export default function AlpixinHeader() {
         </div>
 
         <div className="hidden md:flex items-center space-x-6">
-          <Link to="/Services" className="border border-dark-blue text-black px-4 py-2 hover:bg-white hover:text-dark-blue transition duration-300">
+
+
+          <Link onClick={whatsapplink} className="border border-dark-blue text-black px-4 py-2 hover:bg-white hover:text-dark-blue transition duration-300">
             BOOK A 30 MIN CALL
           </Link>
         </div>
