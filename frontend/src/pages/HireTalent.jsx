@@ -151,9 +151,9 @@ export default function HireTalent() {
     
     <div class="text-center mb-16">
       <p class="text-lg">
-        Being a <span class="font-bold">Reliable and Committed IT Partner</span>, eSparkBiz aims at bringing digital transformation to your business. 
-        <span class="font-bold">Our 14+ years of remarkable expertise</span> with 500+ global collaborations showcase 
-        <span class="font-bold">our trusted development services</span>, state-of-the-art infrastructure, 
+        Being a <span class="font-bold">Reliable and Committed IT Partner</span>, Alpixn aims at bringing digital transformation to your business. 
+        <span class="font-bold">Our 10+ years of remarkable expertise</span> with 500+ global collaborations showcase 
+        <span class="font-bold"> our trusted development services</span>, state-of-the-art infrastructure, 
         transparent transactions, and security to kickstart your digital business strategy.
       </p>
     </div>
@@ -249,8 +249,6 @@ export default function HireTalent() {
     </div>
   </div>
 </section>
-
-
 
             <Footer />
 
