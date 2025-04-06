@@ -13,6 +13,9 @@ import sec from '../../src/assets/sec.png'
 import realestate from '../../src/assets/realestate.png'
 import education from '../../src/assets/education.png'
 import food from '../../src/assets/food.png'
+import log from '../../src/assets/log.png'
+import sporttech from '../../src/assets/sporttech.png'
+import agri from '../../src/assets/agri.jpg'
 
 
 const whatsapplink = () => {
@@ -427,6 +430,193 @@ function Industries () {
       </div>
     </section>
 
+    
+
+
+
+
+
+    <section className="bg-white py-12 md:py-16 px-4 md:px-6">
+      <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-8">
+        {/* Image Section */}
+        <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
+          <div className="relative">
+            <img
+              src={sporttech}
+              alt="Education concept"
+              className="w-full max-w-md mx-auto rounded-lg shadow-sm"
+            />
+          </div>
+        </div>
+
+        {/* Text Content */}
+        <div className="w-full lg:w-1/2">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center lg:text-left">Sports Industry</h2>
+          <p className="text-gray-600 mt-4">
+          Interest in various sports, exploring the digitalized sports industry is not a bad idea. Moreover, 
+          technology is helping unlock unprecedented opportunities present in this industry. From widening 
+          the content reach to engaging sponsors and generating revenue, a fully-functional and well-designed
+           application plays a greater role in increasing sports awareness and availability. Additionally, 
+           Fitness apps and sports coaching apps present completely different opportunities to explore sports ideas. 
+           Then why not venture into this field by leveraging our 
+          fitness/sports app development services and take your business idea a step ahead.
+          </p>
+
+          {/* Features List */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 text-dark-blue font-medium">
+            <ul className="list-disc list-inside space-y-2">
+              <li>Score Tracking & Scoreboard App</li>
+              <li>Personal Training Mobile Apps</li>
+              <li>Fitness Tracker Mobile Apps</li>
+            </ul>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Betting Applications</li>
+              <li>Custom Scoring System</li>
+              <li>On-demand Sports App</li>
+            </ul>
+          </div>
+
+          {/* Call to Action */}
+          <div className="mt-6 text-center lg:text-left">
+            <a
+               onClick={whatsapplink}
+              className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center"
+            >
+              Inquire Now! <span className="ml-2">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Food and Beverages Industry */}
+    <section className="bg-white py-12 md:py-16 px-4 md:px-6">
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8">
+        {/* Text Content */}
+        <div className="w-full lg:w-1/2">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center lg:text-left">Logistics and Transportation Industry</h2>
+          <p className="text-gray-600 mt-4">
+          From smart capacity optimization, effective route planning, and
+           interconnectivity between shippers and warehouses to improving safety and customer experience,
+            digitalization in the logistics and transportation industry is proving disruptive. 
+            With Alpixn advanced software engineering, you can build fully-functional logistics and transportation
+           apps and digital solutions to steer your growth towards innovation.
+          </p>
+
+          {/* Features List */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 text-dark-blue font-medium">
+            <ul className="list-disc list-inside space-y-2">
+              <li>Asset Tracking</li>
+              <li>Warehouse Management</li>
+              <li>GPS Monitoring System</li>
+            </ul>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Supply Chain IoT Solutions</li>
+              <li>Custom Mobile Applications</li>
+            </ul>
+          </div>
+
+          {/* Call to Action */}
+          <div className="mt-6 text-center lg:text-left">
+            <a
+               onClick={whatsapplink}
+              className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center"
+            >
+              Inquire Now! <span className="ml-2">→</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Image Section */}
+        <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
+          <div className="relative">
+            <img
+              src={log}
+              alt="Food industry concept"
+              className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section className="bg-white py-12 md:py-16 px-4 md:px-6">
+      <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-8">
+        {/* Image Section */}
+        <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
+          <div className="relative">
+            <img
+              src={agri}
+              alt="Education concept"
+              className="w-full max-w-md mx-auto rounded-lg shadow-sm"
+            />
+          </div>
+        </div>
+
+        {/* Text Content */}
+        <div className="w-full lg:w-1/2">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center lg:text-left">Agri-tech Industry</h2>
+          <p className="text-gray-600 mt-4">
+          There are numerous inventive ways in which technology is
+           now potentially disrupting the agriculture sector today.
+            Statistically, the agriculture technology industry, or even 
+            better termed the agri-tech industry is predicted to generate
+             9 million jobs by 2024. And 50% of agri-tech startups have come 
+             up that provide supply chain solutions. All of this and more has opened a plethora of opportunities for businesses looking to come up with something new in this actor. Here, our smart agri-tech solution scan assists you with powerful GPS technology, work process automation,
+           global collaboration, streamlining supply and inventory, and so much more.
+          </p>
+
+          {/* Features List */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 text-dark-blue font-medium">
+            <ul className="list-disc list-inside space-y-2">
+              <li>Farm Management Systems</li>
+              <li>Supply Chain</li>
+              <li>Aerial Imaging</li>
+            </ul>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Smart IoT Sensors</li>
+              <li>Indoor and Vertical Farming</li>
+              <li>Robotics and Automation</li>
+            </ul>
+          </div>
+
+          {/* Call to Action */}
+          <div className="mt-6 text-center lg:text-left">
+            <a
+               onClick={whatsapplink}
+              className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center"
+            >
+              Inquire Now! <span className="ml-2">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {/* Hiring Process Section */}
     <section className="bg-gray-100 py-12 md:py-16 px-4 md:px-6">
       <div className="max-w-6xl mx-auto text-center">
@@ -469,6 +659,18 @@ function Industries () {
         </div>
       </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
       {/* Call to Action */}
       <div className="mt-8 text-center">
         <a
@@ -479,6 +681,15 @@ function Industries () {
         </a>
       </div>
     </section>
+
+
+
+
+
+   
+
+
+
 
     <Footer />
     </>
