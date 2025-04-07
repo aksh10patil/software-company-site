@@ -5,8 +5,8 @@ import cmmi from '../../src/assets/cmmi.png'
 import pal from '../../src/assets/pal.png'
 import devops from '../../src/assets/devops.png'
 import soc2 from '../../src/assets/soc2.png'
-import ecom from '../../src/assets/ecom.png'
-import health from '../../src/assets/health.png'
+import ecomn  from '../../src/assets/ecomn.png'
+import medical from '../../src/assets/medical.png'
 import check from '../../src/assets/check.png'
 import insurance from '../../src/assets/insurance.jpg'
 import sec from '../../src/assets/sec.png'
@@ -16,6 +16,11 @@ import food from '../../src/assets/food.png'
 import log from '../../src/assets/log.png'
 import sporttech from '../../src/assets/sporttech.png'
 import agri from '../../src/assets/agri.jpg'
+import manu2 from '../../src/assets/manu2.png'
+import manu from '../../src/assets/manu.jpg'
+import oil from '../../src/assets/oil.png'
+import solarbat from '../../src/assets/solarbat.png'
+
 
 
 const whatsapplink = () => {
@@ -116,7 +121,7 @@ function Industries () {
         <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
           <div className="relative">
             <img
-              src={ecom}
+              src={ecomn}
               alt="Excited shopper"
               className="w-full max-w-md mx-auto rounded-lg shadow-lg"
             />
@@ -132,7 +137,7 @@ function Industries () {
         <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
           <div className="relative">
             <img
-              src={health}
+              src={medical}
               alt="Healthcare professional"
               className="w-full max-w-md mx-auto rounded-lg shadow-sm"
             />
@@ -596,6 +601,190 @@ function Industries () {
     </section>
 
 
+    {/* Normal Layout - Infrastructure & Hydro */}
+<section className="bg-white py-12 md:py-16 px-4 md:px-6">
+  <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8">
+    
+    {/* Text Content */}
+    <div className="w-full lg:w-1/2">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center lg:text-left">
+        Infrastructure & Hydro Industry
+      </h2>
+      <p className="text-gray-600 mt-4">
+        The infrastructure and hydro sectors are embracing tech to drive smarter, safer, and more sustainable 
+        development. Over <strong>78% of engineering firms</strong> believe digital tools improve project 
+        efficiency and resilience.
+      </p>
+      <p className="text-gray-600 mt-2">
+        From water resource optimization to smart infrastructure management, we provide digital solutions 
+        tailored for modern public works and energy infrastructure projects.
+      </p>
+
+      {/* Features List */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 text-dark-blue font-medium">
+        <ul className="list-disc list-inside space-y-2">
+          <li>Hydroelectric Plant Monitoring</li>
+          <li>Smart Infrastructure Dashboards</li>
+          <li>Water Flow Management Systems</li>
+        </ul>
+        <ul className="list-disc list-inside space-y-2">
+          <li>GIS & Mapping Solutions</li>
+          <li>Construction Project Analytics</li>
+          <li>Asset Lifecycle Management</li>
+        </ul>
+      </div>
+
+      {/* Call to Action */}
+      <div className="mt-6 text-center lg:text-left">
+        <a
+          onClick={whatsapplink}
+          className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center"
+        >
+          Inquire Now! <span className="ml-2">→</span>
+        </a>
+      </div>
+    </div>
+
+    {/* Image Section */}
+    <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
+      <div className="relative">
+        <img
+          src={manu} // replace with your image path
+          alt="Infrastructure and Hydro Projects"
+          className="w-full max-w-md mx-auto rounded-lg shadow-sm"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<section className="bg-white py-12 md:py-16 px-4 md:px-6">
+  <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-8">
+    <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
+      <img src={manu2} alt="Manufacturing Industry" className="w-full max-w-md mx-auto rounded-lg shadow-sm" />
+    </div>
+
+    <div className="w-full lg:w-1/2">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center lg:text-left">Manufacturing Industry</h2>
+      <p className="text-gray-600 mt-4">
+        Automation and Industry 4.0 are redefining how manufacturers design, produce, and deliver goods.
+        <strong>Over 60%</strong> of smart factories leverage AI and data analytics to optimize production.
+      </p>
+      <p className="text-gray-600 mt-2">
+        We build scalable systems for predictive maintenance, workflow automation, and real-time quality assurance.
+      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 text-dark-blue font-medium">
+        <ul className="list-disc list-inside space-y-2">
+          <li>Smart Factory Solutions</li>
+          <li>Production Line Automation</li>
+          <li>Digital Twin Technology</li>
+        </ul>
+        <ul className="list-disc list-inside space-y-2">
+          <li>Inventory & SCM Platforms</li>
+          <li>Predictive Maintenance</li>
+          <li>Custom ERP Integration</li>
+        </ul>
+      </div>
+
+      <div className="mt-6 text-center lg:text-left">
+        <a onClick={whatsapplink} className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center">
+        Inquire Now! <span className="ml-2">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+    
+
+        {/* oil and gas industries */}
+
+        <section className="bg-white py-12 md:py-16 px-4 md:px-6">
+  <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-8">
+    
+    {/* Text Content */}
+    <div className="w-full lg:w-1/2">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center lg:text-left">Oil & Gas Industry</h2>
+      <p className="text-gray-600 mt-4">
+        Digital innovation is revolutionizing exploration, drilling, and logistics in the oil & gas sector.
+        Around <strong>85% of industry leaders</strong> believe digital transformation improves asset utilization and sustainability.
+      </p>
+      <p className="text-gray-600 mt-2">
+        Our smart software and IoT solutions help companies streamline operations, monitor pipelines in real-time,
+        and reduce operational risks.
+      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 text-dark-blue font-medium">
+        <ul className="list-disc list-inside space-y-2">
+          <li>Pipeline Monitoring</li>
+          <li>Asset Management Systems</li>
+          <li>Remote Inspection Solutions</li>
+        </ul>
+        <ul className="list-disc list-inside space-y-2">
+          <li>IoT-based Sensor Systems</li>
+          <li>Energy Data Analytics</li>
+          <li>Field Mobility Solutions</li>
+        </ul>
+      </div>
+
+      <div className="mt-6 text-center lg:text-left">
+        <a onClick={whatsapplink} className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center">
+        Inquire Now! <span className="ml-2">→</span>
+        </a>
+      </div>
+    </div>
+
+    {/* Image Section */}
+    <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
+      <img src={oil} alt="Oil and Gas Industry" className="w-full max-w-md mx-auto rounded-lg shadow-sm" />
+    </div>
+  </div>
+</section>
+
+<section className="bg-white py-12 md:py-16 px-4 md:px-6">
+  <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-8">
+    <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
+      <img src={solarbat} alt="Solar and Battery Tech" className="w-full max-w-md mx-auto rounded-lg shadow-sm" />
+    </div>
+
+    <div className="w-full lg:w-1/2">
+      <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center lg:text-left">Solar & Battery Industry</h2>
+      <p className="text-gray-600 mt-4">
+        The renewable energy boom is driving adoption of solar grids, smart batteries, and home energy systems.
+        <strong>Global solar adoption</strong> is expected to grow by 30% annually.
+      </p>
+      <p className="text-gray-600 mt-2">
+        We empower companies with tools to monitor solar assets, manage battery life, and analyze energy production trends.
+      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6 text-dark-blue font-medium">
+        <ul className="list-disc list-inside space-y-2">
+          <li>Solar Panel Monitoring</li>
+          <li>Battery Lifecycle Tools</li>
+          <li>Energy Usage Dashboards</li>
+        </ul>
+        <ul className="list-disc list-inside space-y-2">
+          <li>IoT & Sensor Integration</li>
+          <li>Smart Grid Management</li>
+          <li>Green Analytics Platforms</li>
+        </ul>
+      </div>
+
+      <div className="mt-6 text-center lg:text-left">
+        <a onClick={whatsapplink} className="text-lg font-bold text-dark-blue hover:underline inline-flex items-center">
+        Inquire Now! <span className="ml-2">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 
 
 
@@ -665,12 +854,6 @@ function Industries () {
 
 
 
-
-
-
-
-
-
       {/* Call to Action */}
       <div className="mt-8 text-center">
         <a
@@ -681,15 +864,6 @@ function Industries () {
         </a>
       </div>
     </section>
-
-
-
-
-
-   
-
-
-
 
     <Footer />
     </>
