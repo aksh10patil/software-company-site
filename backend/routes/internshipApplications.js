@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const InternshipApplication = require('../models/InternshipApplication');
-const auth = require('../middleware/auth'); // Assuming you have authentication middleware
+//const auth = require('../middleware/auth'); // Assuming you have authentication middleware
 
 // POST - Submit new internship application
 router.post('/api/internship-applications', async (req, res) => {
