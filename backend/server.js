@@ -5,7 +5,7 @@ const path = require('path');
 const cors = require('cors');
 const connectDB = require('./config/db');
 const internshipApplicationRoutes = require('./routes/internshipApplications');
-//const authRoutes = require('./routes/auth'); // Assuming you have auth routes
+const authRoutes = require('./routes/auth'); // Uncommented this line
 
 // Load environment variables
 dotenv.config();
@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
 
 // Mount routes
 app.use(internshipApplicationRoutes);
-app.use(authRoutes); // Assuming you have auth routes
+app.use(authRoutes); // Uncommented this line
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
