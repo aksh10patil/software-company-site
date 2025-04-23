@@ -20,12 +20,19 @@ const AdminApplications = () => {
   const fetchApplications = async () => {
     setLoading(true);
     try {
+      // Get token from localStorage or wherever you store it
+      const token = localStorage.getItem('token'); // or from your auth state
+      
       let queryParams = `?page=${currentPage}&limit=10`;
       if (filters.status) queryParams += `&status=${filters.status}`;
       if (filters.preferredRole) queryParams += `&preferredRole=${filters.preferredRole}`;
       if (filters.search) queryParams += `&search=${filters.search}`;
       
-      const response = await axios.get(`/api/internship-applications${queryParams}`);
+      const response = await axios.get(`/api/internship-applications${queryParams}`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
       
       if (response.data.success) {
         setApplications(response.data.data);
@@ -35,6 +42,7 @@ const AdminApplications = () => {
       }
     } catch (err) {
       setError(err.message || 'Error fetching applications');
+      console.error('Detailed error:', err); // Log detailed error for debugging
     } finally {
       setLoading(false);
     }
@@ -55,7 +63,14 @@ const AdminApplications = () => {
 
   const viewApplicationDetails = async (id) => {
     try {
-      const response = await axios.get(`/api/internship-applications/${id}`);
+      const token = localStorage.getItem('token'); // or from your auth state
+      
+      const response = await axios.get(`/api/internship-applications/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+      
       if (response.data.success) {
         setSelectedApplication(response.data.data);
         setUpdateStatus(response.data.data.status);
@@ -68,9 +83,16 @@ const AdminApplications = () => {
 
   const handleStatusUpdate = async () => {
     try {
+      const token = localStorage.getItem('token'); // or from your auth state
+      
       const response = await axios.patch(
         `/api/internship-applications/${selectedApplication._id}/status`,
-        { status: updateStatus, adminNotes }
+        { status: updateStatus, adminNotes },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        }
       );
       
       if (response.data.success) {
@@ -95,6 +117,18 @@ const AdminApplications = () => {
     setUpdateStatus('');
     setAdminNotes('');
   };
+
+  // const handleLogin = async (email, password) => {
+  //   try {
+  //     const response = await axios.post('/api/users/login', { email, password });
+  //     if (response.data.success) {
+  //       localStorage.setItem('token', response.data.token);
+  //       // Redirect to admin page or set authenticated state
+  //     }
+  //   } catch (error) {
+  //     console.error('Login error:', error);
+  //   }
+  // };
 
   // Status color mapping
   const getStatusColor = (status) => {
