@@ -7,6 +7,7 @@ import HireTalent from './pages/HireTalent'
 import Industries from './pages/Industries'
 import Portfolio from './pages/Portfolio'
 import Services from './pages/Services'
+import Internships from './pages/Internships'
 
 export default function App () {
 return (
@@ -20,6 +21,8 @@ return (
           <Route path = "/industries" element ={<Industries />}/>
           <Route path = "/portfolio" element ={<Portfolio />}/>
           <Route path = "/services" element ={<Services />}/>
+          <Route path = "/internships" element ={<Internships />}/>
+
     </Routes>
     </Router>
   </>
