@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import AdminLayout from '../components/AdminLayout'; // Create this component for admin layout
+import AdminLayout from './components/AdminLayout'; // Create this component for admin layout
 
 const AdminApplications = () => {
   const [applications, setApplications] = useState([]);
