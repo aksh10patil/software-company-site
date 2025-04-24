@@ -15,8 +15,7 @@ const AllInternships = () => {
   });
   const navigate = useNavigate();
 
- // Modified authentication check for AllInternships.jsx
-// You only need to replace the useEffect checkAuth function
+
 
 useEffect(() => {
   // Check if user is authenticated
@@ -31,35 +30,11 @@ useEffect(() => {
         return;
       }
 
-      // In a real application, you would verify the token with the backend
-      // For now, we'll assume the token is valid if it exists
+    
       
       fetchInternships(token);
       
-      // If you want to keep the server-side verification logic:
-      /*
-      try {
-        // Verify token with backend
-        const authResponse = await axios.get('http://localhost:4000/api/auth/verify', {
-          headers: {
-            'Authorization': `Bearer ${token}`
-          }
-        });
-
-        // If token is valid, fetch internships
-        if (authResponse.data.isAuthenticated) {
-          fetchInternships(token);
-        } else {
-          // Token is invalid, redirect to login
-          localStorage.removeItem('authToken');
-          navigate('/login', { state: { from: '/allinternships' } });
-        }
-      } catch (err) {
-        console.error('Authentication error:', err);
-        localStorage.removeItem('authToken');
-        navigate('/login', { state: { from: '/allinternships' } });
-      }
-      */
+     
       
     } catch (err) {
       console.error('Authentication error:', err);

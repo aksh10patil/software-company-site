@@ -13,12 +13,12 @@ const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
   
-  // Get the intended destination if redirected from a protected route
+
   const from = location.state?.from || '/allinternships';
 
-  // Fixed credentials
-  const VALID_USERNAME = 'admin';
-  const VALID_PASSWORD = 'admin123';
+
+  const VALID_USERNAME = 'alpixn';
+  const VALID_PASSWORD = 'alpixn123';
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,15 +31,15 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Check if credentials match the fixed values
+
     if (credentials.username === VALID_USERNAME && credentials.password === VALID_PASSWORD) {
-      // Generate a simple token (in a real app, this would come from the backend)
+     
       const mockToken = btoa(`${credentials.username}:${Date.now()}`);
       
-      // Set authentication token in local storage
+
       localStorage.setItem('authToken', mockToken);
       
-      // Redirect to original destination or AllInternships page
+
       navigate(from);
     } else {
       setError('Invalid username or password');
