@@ -118,17 +118,17 @@ const AdminApplications = () => {
     setAdminNotes('');
   };
 
-  // const handleLogin = async (email, password) => {
-  //   try {
-  //     const response = await axios.post('/api/users/login', { email, password });
-  //     if (response.data.success) {
-  //       localStorage.setItem('token', response.data.token);
-  //       // Redirect to admin page or set authenticated state
-  //     }
-  //   } catch (error) {
-  //     console.error('Login error:', error);
-  //   }
-  // };
+  const handleLogin = async (email, password) => {
+    try {
+      const response = await axios.post('/api/users/login', { email, password });
+      if (response.data.success) {
+        localStorage.setItem('token', response.data.token);
+        // Redirect to admin page or set authenticated state
+      }
+    } catch (error) {
+      console.error('Login error:', error);
+    }
+  };
 
   // Status color mapping
   const getStatusColor = (status) => {

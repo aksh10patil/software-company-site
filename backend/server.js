@@ -1,54 +1,37 @@
-// backend/server.js
+// server.js
 const express = require('express');
-const dotenv = require('dotenv');
-const path = require('path');
+const mongoose = require('mongoose');
 const cors = require('cors');
-const connectDB = require('./config/db');
-const internshipApplicationRoutes = require('./routes/internshipApplications');
-const authRoutes = require('./routes/auth');
-const adminDashboardRoutes = require('./routes/adminDashboard'); // Add this line
+const dotenv = require('dotenv');
+const internshipRoutes = require('./routes/InternshipRoutes');
 
 // Load environment variables
 dotenv.config();
 
-// Connect to database
-connectDB();
-
-// Initialize express
 const app = express();
 
 // Middleware
-app.use(cors());
-app.use(express.json()); // Parse JSON bodies
-app.use(express.urlencoded({ extended: true })); // Parse URL-encoded bodies
+app.use(cors({
+    origin: 'http://localhost:5173',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true
+  }));
+  
+app.use(express.json());
 
-// Mount routes
-app.use(internshipApplicationRoutes);
-app.use(authRoutes);
-app.use(adminDashboardRoutes); // Add this line
+// Connect to MongoDB
+mongoose.connect(process.env.MONGO_URI)
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log('MongoDB connection error:', err));
 
-// Serve static assets in production
-if (process.env.NODE_ENV === 'production') {
-  // Set static folder
-  app.use(express.static(path.join(__dirname, '../frontend/build')));
+// Routes
+app.use(internshipRoutes);
 
-  // Any route not defined above will be redirected to index.html
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../frontend/build', 'index.html'));
-  });
-}
-
-// Define port
-const PORT = process.env.PORT || 5000;
+// Basic route
+app.get('/', (req, res) => {
+  res.send('Internship API is running');
+});
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
-});
-
-// Handle unhandled promise rejections
-process.on('unhandledRejection', (err, promise) => {
-  console.error(`Error: ${err.message}`);
-  // Close server & exit process
-  process.exit(1);
-});
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
