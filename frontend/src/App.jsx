@@ -6,11 +6,9 @@ import HireTalent from './pages/HireTalent';
 import Industries from './pages/Industries';
 import Portfolio from './pages/Portfolio';
 import Services from './pages/Services';
-import Login from './pages/Login'; // Fixed capitalization (login -> Login)
- import ProtectedRoute from './pages/components/ProtectedRoute';
-// import PrivateRoute from './pages/components/PrivateRoute';
+import Login from './pages/Login';
+import ProtectedRoute from './pages/components/ProtectedRoute';
 import Internships from './pages/Internships';
-//import AdminApplications from './pages/AdminApplications'
 import AllInternships from './pages/AllInternships';
 
 export default function App() {
@@ -26,21 +24,19 @@ export default function App() {
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/services" element={<Services />} />
           <Route path="/internships" element={<Internships />} />
-          {/* <Route path = "/admin" element ={<AdminApplications />}/> */}
           
-          {/* Add login route */}
+          {/* Login route */}
           <Route path="/login" element={<Login />} />
           
-          {/* Make AllInternships a protected route */}
-          <Route path="/Login" element={<Login />} />
-                          <Route 
-                            path="/allinternships" 
-                            element={
-                              <ProtectedRoute>
-                                <AllInternships />
-                              </ProtectedRoute>
-                            } 
-                  />
+          {/* Protected route for AllInternships */}
+          <Route 
+            path="/allinternships" 
+            element={
+              <ProtectedRoute>
+                <AllInternships />
+              </ProtectedRoute>
+            } 
+          />
           
           {/* Redirect any unknown routes to home */}
           <Route path="*" element={<Navigate to="/" replace />} />

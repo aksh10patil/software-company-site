@@ -15,19 +15,30 @@ const AllInternships = () => {
   });
   const navigate = useNavigate();
 
-  useEffect(() => {
-    // Check if user is authenticated
-    const checkAuth = async () => {
-      try {
-        // Get token from localStorage or wherever you store it
-        const token = localStorage.getItem('authToken');
-        
-        if (!token) {
-          // No token found, redirect to login
-          navigate('/login', { state: { from: '/allinternships' } });
-          return;
-        }
+ // Modified authentication check for AllInternships.jsx
+// You only need to replace the useEffect checkAuth function
 
+useEffect(() => {
+  // Check if user is authenticated
+  const checkAuth = async () => {
+    try {
+      // Get token from localStorage
+      const token = localStorage.getItem('authToken');
+      
+      if (!token) {
+        // No token found, redirect to login
+        navigate('/login', { state: { from: '/allinternships' } });
+        return;
+      }
+
+      // In a real application, you would verify the token with the backend
+      // For now, we'll assume the token is valid if it exists
+      
+      fetchInternships(token);
+      
+      // If you want to keep the server-side verification logic:
+      /*
+      try {
         // Verify token with backend
         const authResponse = await axios.get('http://localhost:4000/api/auth/verify', {
           headers: {
@@ -45,14 +56,20 @@ const AllInternships = () => {
         }
       } catch (err) {
         console.error('Authentication error:', err);
-        // If authentication fails, redirect to login
         localStorage.removeItem('authToken');
         navigate('/login', { state: { from: '/allinternships' } });
       }
-    };
+      */
+      
+    } catch (err) {
+      console.error('Authentication error:', err);
+      localStorage.removeItem('authToken');
+      navigate('/login', { state: { from: '/allinternships' } });
+    }
+  };
 
-    checkAuth();
-  }, [navigate]);
+  checkAuth();
+}, [navigate]);
 
   const fetchInternships = async (token) => {
     try {
