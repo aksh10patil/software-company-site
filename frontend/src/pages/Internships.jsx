@@ -17,11 +17,34 @@ const Internships = () => {
     });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
+  // in Internships.jsx, update the handleSubmit function
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  
+  try {
+    // Set default status as "new" for all applications
+    const applicationData = {
+      ...formData,
+      status: "new",
+      submittedAt: new Date()
+    };
     
-  };
+    const response = await axios.post('/api/internship-applications', applicationData);
+    
+    if (response.data.success) {
+      // Show success message
+      alert('Application submitted successfully!');
+      // Reset form
+      setFormData({});
+      e.target.reset();
+    } else {
+      alert('Error submitting application. Please try again.');
+    }
+  } catch (error) {
+    console.error('Error submitting application:', error);
+    alert('Error submitting application. Please try again.');
+  }
+};
 
   return (
     <>
