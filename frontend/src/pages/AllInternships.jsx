@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -12,23 +13,69 @@ const AllInternships = () => {
     role: '',
     duration: ''
   });
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchInternships = async () => {
+    // Check if user is authenticated
+    const checkAuth = async () => {
       try {
-        setLoading(true);
-        const response = await axios.get('http://localhost:4000/api/internships');
-        setInternships(response.data.data);
-        setLoading(false);
+        // Get token from localStorage or wherever you store it
+        const token = localStorage.getItem('authToken');
+        
+        if (!token) {
+          // No token found, redirect to login
+          navigate('/login', { state: { from: '/allinternships' } });
+          return;
+        }
+
+        // Verify token with backend
+        const authResponse = await axios.get('http://localhost:4000/api/auth/verify', {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+
+        // If token is valid, fetch internships
+        if (authResponse.data.isAuthenticated) {
+          fetchInternships(token);
+        } else {
+          // Token is invalid, redirect to login
+          localStorage.removeItem('authToken');
+          navigate('/login', { state: { from: '/allinternships' } });
+        }
       } catch (err) {
-        setError('Failed to fetch internships');
-        setLoading(false);
-        console.error(err);
+        console.error('Authentication error:', err);
+        // If authentication fails, redirect to login
+        localStorage.removeItem('authToken');
+        navigate('/login', { state: { from: '/allinternships' } });
       }
     };
 
-    fetchInternships();
-  }, []);
+    checkAuth();
+  }, [navigate]);
+
+  const fetchInternships = async (token) => {
+    try {
+      setLoading(true);
+      const response = await axios.get('http://localhost:4000/api/internships', {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+      setInternships(response.data.data);
+      setLoading(false);
+    } catch (err) {
+      setError('Failed to fetch internships');
+      setLoading(false);
+      console.error(err);
+
+      // If the error is 401 (unauthorized), redirect to login
+      if (err.response && err.response.status === 401) {
+        localStorage.removeItem('authToken');
+        navigate('/login', { state: { from: '/allinternships' } });
+      }
+    }
+  };
 
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
