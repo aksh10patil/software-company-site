@@ -49,11 +49,12 @@ useEffect(() => {
   const fetchInternships = async (token) => {
     try {
       setLoading(true);
-      const response = await axios.get('http://localhost:4000/api/internships', {
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND}/api/internships`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
       });
+      ;
       setInternships(response.data.data);
       setLoading(false);
     } catch (err) {
