@@ -8,7 +8,8 @@ import Industries from './pages/Industries'
 import Portfolio from './pages/Portfolio'
 import Services from './pages/Services'
 import Internships from './pages/Internships'
-import AdminApplications from './pages/AdminApplications'
+ //import AdminApplications from './pages/AdminApplications'
+import AllInternships from './pages/AllInternships';
 
 export default function App () {
 return (
@@ -23,7 +24,8 @@ return (
           <Route path = "/portfolio" element ={<Portfolio />}/>
           <Route path = "/services" element ={<Services />}/>
           <Route path = "/internships" element ={<Internships />}/>
-          <Route path = "/admin" element ={<AdminApplications />}/>
+          {/* <Route path = "/admin" element ={<AdminApplications />}/> */}
+          <Route path = "/allinternships" element ={<AllInternships />}/>
 
     </Routes>
     </Router>
