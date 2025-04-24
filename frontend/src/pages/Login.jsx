@@ -1,6 +1,6 @@
 // pages/Login.jsx
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -11,10 +11,14 @@ const Login = () => {
   });
   const [error, setError] = useState('');
   const navigate = useNavigate();
+  const location = useLocation();
+  
 
-  // Fixed credentials
-  const VALID_USERNAME = 'admin';
-  const VALID_PASSWORD = 'admin123';
+  const from = location.state?.from || '/allinternships';
+
+
+  const VALID_USERNAME = 'alpixn';
+  const VALID_PASSWORD = 'alpixn123';
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,12 +31,16 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     
-    // Check if credentials match the fixed values
+
     if (credentials.username === VALID_USERNAME && credentials.password === VALID_PASSWORD) {
-      // Set authentication in local storage
-      localStorage.setItem('isAuthenticated', 'true');
-      // Redirect to AllInternships page
-      navigate('/allinternships');
+     
+      const mockToken = btoa(`${credentials.username}:${Date.now()}`);
+      
+
+      localStorage.setItem('authToken', mockToken);
+      
+
+      navigate(from);
     } else {
       setError('Invalid username or password');
     }
