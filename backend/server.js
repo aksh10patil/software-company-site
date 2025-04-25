@@ -12,7 +12,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: 'https://www.alpixn.com',
+    origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
   }));
