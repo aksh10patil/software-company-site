@@ -49,7 +49,7 @@ useEffect(() => {
   const fetchInternships = async (token) => {
     try {
       setLoading(true);
-      const response = await axios.get(`${import.meta.env.VITE_BACKEND}/api/internships`, {
+      const response = await axios.get(`${import.meta.env.VITE_BACKEND2}/api/internships`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

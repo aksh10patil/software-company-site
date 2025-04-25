@@ -28,7 +28,7 @@ export default function App() {
           {/* Login route */}
           <Route path="/login" element={<Login />} />
           
-          {/* Protected route for AllInternships */}
+
           <Route 
             path="/allinternships" 
             element={
