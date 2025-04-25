@@ -27,7 +27,7 @@ const Internships = () => {
     
     try {
       const response = await axios.post(
-        `${import.meta.env.VITE_BACKEND}/api/internships`, formData);
+        `${import.meta.env.VITE_BACKEND2}/api/internships`, formData);
       
       if (response.data.success) {
         setMessage({ 
