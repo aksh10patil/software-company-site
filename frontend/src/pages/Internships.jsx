@@ -5,6 +5,7 @@ import TeamStrucutre from '../pages/components/TeamStructure'
 import onemonth from '../assets/onemonth.png';
 import threemonth from '../assets/threemonths.png';
 import fourmonth from '../assets/fourmonths.png';
+import fourmonth2 from '../assets/fourmonths2.png';
 import axios from 'axios'; // Make sure to install axios
 
 const Internships = () => {
@@ -58,7 +59,7 @@ const Internships = () => {
     <div>
       <div className="bg-white py-8 px-4">
         <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-6">
-          {[onemonth, threemonth, fourmonth].map((img, index) => (
+          {[onemonth, threemonth, fourmonth , fourmonth2].map((img, index) => (
             <div key={index} className="w-[200px] h-[120px] rounded-lg shadow-lg overflow-hidden bg-white">
               <img src={img} alt={`Banner ${index + 1}`} className="w-full h-full object-contain" />
             </div>
