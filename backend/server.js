@@ -25,10 +25,10 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.log('MongoDB connection error:', err));
 
 // Routes
-app.use(internshipRoutes);
+app.use('/api',internshipRoutes);
 
 // Basic route
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
   res.send('Internship API is running');
 });
 
