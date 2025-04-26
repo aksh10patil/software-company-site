@@ -4,7 +4,7 @@ const router = express.Router();
 const Internship = require('../models/Internship');
 
 // POST endpoint to save internship application
-router.post('/api/internships', async (req, res) => {
+router.post('/internships', async (req, res) => {
   try {
     const internship = new Internship(req.body);
     await internship.save();
@@ -23,7 +23,7 @@ router.post('/api/internships', async (req, res) => {
 });
 
 // GET endpoint to retrieve all internships
-router.get('/api/internships', async (req, res) => {
+router.get('/internships', async (req, res) => {
   try {
     const internships = await Internship.find().sort({ appliedDate: -1 });
     res.status(200).json({ 
@@ -41,7 +41,7 @@ router.get('/api/internships', async (req, res) => {
 });
 
 // GET endpoint to retrieve a single internship by ID
-router.get('/api/internships/:id', async (req, res) => {
+router.get('/internships/:id', async (req, res) => {
   try {
     const internship = await Internship.findById(req.params.id);
     if (!internship) {
