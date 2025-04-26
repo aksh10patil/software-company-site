@@ -88,7 +88,17 @@ const Internships = () => {
               <input type="email" name="email" placeholder="Email Address" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300" onChange={handleChange} required />
               <input type="text" name="mobile" placeholder="Mobile Number" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300" onChange={handleChange} required />
               <input type="text" name="location" placeholder="Location (City & State)" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300" onChange={handleChange} required />
-              <input type="date" name="dob" placeholder="Date of Birth" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300" onChange={handleChange} required />
+                            <div className="mb-4">
+                <input 
+                  type="date" 
+                  name="dob" 
+                  placeholder="Date of Birth" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300" 
+                  onChange={handleChange} 
+                  required 
+                />
+                <p className="mt-1 text-sm text-gray-500">This field is for Date of Birth</p>
+              </div>
             </div>
           </div>
 
@@ -121,8 +131,11 @@ const Internships = () => {
               </select>
               <select name="duration" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300" onChange={handleChange} required>
                 <option value="">Duration</option>
-                <option value="3 Months">3 Months (Basic)</option>
-                <option value="4 Months">4 Months (Pro / Premium)</option>
+                <option value="1 Month">1 Months (Basic)</option>
+                <option value="3 Months">3 Months (Beginner)</option>
+                <option value="4 Months">4 Months (Pro)</option>
+                <option value="4 Months">4 Months (Premium)</option>
+                
               </select>
             </div>
             <div className="space-y-4">
