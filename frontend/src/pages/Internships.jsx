@@ -5,6 +5,7 @@ import TeamStrucutre from '../pages/components/TeamStructure'
 import onemonth from '../assets/onemonth.png';
 import threemonth from '../assets/threemonths.png';
 import fourmonth from '../assets/fourmonths.png';
+import fourmonth2 from '../assets/fourmonths2.png';
 import axios from 'axios'; // Make sure to install axios
 
 const Internships = () => {
@@ -58,7 +59,7 @@ const Internships = () => {
     <div>
       <div className="bg-white py-8 px-4">
         <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-6">
-          {[onemonth, threemonth, fourmonth].map((img, index) => (
+          {[onemonth, threemonth, fourmonth , fourmonth2].map((img, index) => (
             <div key={index} className="w-[200px] h-[120px] rounded-lg shadow-lg overflow-hidden bg-white">
               <img src={img} alt={`Banner ${index + 1}`} className="w-full h-full object-contain" />
             </div>
@@ -88,7 +89,17 @@ const Internships = () => {
               <input type="email" name="email" placeholder="Email Address" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300" onChange={handleChange} required />
               <input type="text" name="mobile" placeholder="Mobile Number" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300" onChange={handleChange} required />
               <input type="text" name="location" placeholder="Location (City & State)" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300" onChange={handleChange} required />
-              <input type="date" name="dob" placeholder="Date of Birth" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300" onChange={handleChange} required />
+                            <div className="mb-4">
+                <input 
+                  type="date" 
+                  name="dob" 
+                  placeholder="Date of Birth" 
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300" 
+                  onChange={handleChange} 
+                  required 
+                />
+                <p className="mt-1 text-sm text-gray-500">This field is for Date of Birth</p>
+              </div>
             </div>
           </div>
 
@@ -121,8 +132,11 @@ const Internships = () => {
               </select>
               <select name="duration" className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-300" onChange={handleChange} required>
                 <option value="">Duration</option>
-                <option value="3 Months">3 Months (Basic)</option>
-                <option value="4 Months">4 Months (Pro / Premium)</option>
+                <option value="1 Month">1 Months (Basic)</option>
+                <option value="3 Months">3 Months (Beginner)</option>
+                <option value="4 Months">4 Months (Pro)</option>
+                <option value="4 Months">4 Months (Premium)</option>
+                
               </select>
             </div>
             <div className="space-y-4">
