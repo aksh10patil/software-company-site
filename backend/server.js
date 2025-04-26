@@ -28,7 +28,7 @@ mongoose.connect(process.env.MONGO_URI)
 app.use('/api',internshipRoutes);
 
 // Basic route
-app.get('/api', (req, res) => {
+app.get('/', (req, res) => {
   res.send('Internship API is running');
 });
 
